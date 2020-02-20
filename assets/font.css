@@ -1,0 +1,66 @@
+    .buttonpltw
+    {
+
+    background-color: #ffffff;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    padding: 4px 4px;
+
+    font-family: calibri;
+    border-radius: 8px;
+        
+    }
+    .button
+    {
+    background-color: #ffffff;
+    color: black;
+    padding: 1px 1px;
+    text-align: center;
+    font-size: 16px;
+    font-family: calibri;
+    border-radius: 8px;
+    width: 400px;
+    
+    }
+    
+    .text
+    {
+
+    font-family: calibri; 
+    font-size: 18px; 
+    color: white;
+    text-align: center;
+    }
+    .smalltext
+    {
+
+    font-family: calibri; 
+    font-size: 18px; 
+    color: white;
+    text-align: center;
+    }
+    .medtext
+    {
+
+    font-family: calibri; 
+    font-size: 25px; 
+    color: white;
+    text-align: center;
+    }
+    .bigtext
+    {
+
+    font-family: calibri; 
+    font-size: 85px; 
+    color: white;
+    text-align: center;
+    }
+    .nums
+    {
+
+    font-family: calibri; 
+    font-size: 40px; 
+    color: white;
+    text-align: center;
+    }
