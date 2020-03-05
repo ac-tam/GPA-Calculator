@@ -115,7 +115,7 @@ function calcAvg(nums)
     if (gymEntered)
         invalid += 0.5;
 
-    sum = sum / (nums.length - invalid)
+    sum /= (nums.length - invalid)
     return sum + ""
 }
 
