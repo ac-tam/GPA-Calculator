@@ -33,7 +33,7 @@ function quick()
         for (var i = 0; i < gradeArray.length; i++)
             if (gradeArray[i].getType() == "ap") 
                 ap += gradeArray[i].getAvg() + ", ";
-            else if (gradeArray[i].getType() == "gym") 
+            else if (gradeArsay[i].getType() == "gym") 
                 gym += gradeArray[i].getAvg();
             else
             {
@@ -105,12 +105,12 @@ function calcAvg(nums)
     for (var i = 0; i < nums.length; i++)
     {
         if (nums[i] !== "" && nums[i] !== ",")
-            sm += parseFloat(nums[i])
+            sum += parseFloat(nums[i])
         else
             invalid++ 
     }
 
-    if  (sm == 0)
+    if  (sum == 0)
         return "0"
     if (gymEntered)
         invalid += 0.5;
