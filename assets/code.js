@@ -33,7 +33,7 @@ function quick()
         for (var i = 0; i < gradeArray.length; i++)
             if (gradeArray[i].getType() == "ap") 
                 ap += gradeArray[i].getAvg() + ", ";
-            else if (gradeArsay[i].getType() == "gym") 
+            else if (gradeArray[i].getType() == "gym") 
                 gym += gradeArray[i].getAvg();
             else
             {
