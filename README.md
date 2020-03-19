@@ -1,5 +1,5 @@
 # GPA Calculator
-https://atam9.github.io/GPA-Calculator/
+https://ac-tam.github.io/GPA-Calculator/
 
 Use this calculator to effortlessly calculate your grade point average in the 100 scale and 4.0 scale.
 AP Classes and Gym are weighted automatically, and noncredit courses such as lab are not averaged in
