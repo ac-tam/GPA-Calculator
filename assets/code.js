@@ -1,4 +1,5 @@
 var gymEntered = false;
+
 function quick()
 {
     var str = document.getElementById("direct").value;
@@ -7,8 +8,8 @@ function quick()
         document.getElementById("faq").style.display = "none";
         document.getElementById("pupilpath").style.display = "none";
         document.getElementById("pl").style.display = "block";
-        var gradeArray =[];
-        var grade, start;
+        var gradeArray = [];
+
         var start;
         for (var i = 0; i < str.length; i++)
             if (str.substring(i, i + 1) === ":")
@@ -60,9 +61,22 @@ function quick()
         if (document.getElementById("grades").value === "")
             document.getElementById("textclick").style.display = "none"
         avg();
-    }
-
+        }
+        else 
+        {
+            document.getElementById("faq").style.display = "block";
+            document.getElementById("pupilpath").style.display = "block";
+            document.getElementById("pl").style.display = "none";   
+            document.getElementById("gradesHere").style.display = "none";    
+            document.getElementById("textmanual").style.display = "block";     
+ 
+            document.getElementById("gym").value = ""
+            document.getElementById("AP").value = ""
+            document.getElementById("grades").value = ""
+        }
 }
+
+
 
 function avg()
 {   
@@ -71,7 +85,7 @@ function avg()
     var APGrades = strToArr(document.getElementById('AP').value);
 
     var transcript = []
-    var transcriptunweighted =[]
+    var transcriptunweighted = []
 
     transcript = transcript.concat(normGrades)
     transcriptunweighted = transcriptunweighted.concat(normGrades)
