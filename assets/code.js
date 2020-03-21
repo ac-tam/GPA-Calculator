@@ -1,4 +1,5 @@
 var gymEntered = false;
+
 function quick()
 {
     var str = document.getElementById("direct").value;
@@ -7,8 +8,7 @@ function quick()
         document.getElementById("faq").style.display = "none";
         document.getElementById("pupilpath").style.display = "none";
         document.getElementById("pl").style.display = "block";
-        var gradeArray  =[];
-        var grade, start;
+        var gradeArray = [];
         var start;
         for (var i = 0; i < str.length; i++)
             if (str.substring(i, i + 1) === ":")
@@ -61,6 +61,16 @@ function quick()
             document.getElementById("textclick").style.display = "none"
         avg();
     }
+
+    else 
+    {
+        document.getElementById("faq").style.display = "block";
+        document.getElementById("pupilpath").style.display = "block";
+        document.getElementById("pl").style.display = "none";
+        document.getElementById("textmanual").style.display = "block"
+    }
+
+
 }
 
 function avg()
