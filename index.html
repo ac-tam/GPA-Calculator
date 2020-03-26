@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<body id = "back" style = "background-color:slategrey;" >
-        <head>
-            <title>GPA Calculator</title>
-            <link rel= "stylesheet" type="text/css" href="assets/font.css">
-            <script src= "assets/code.js" type="text/javascript"></script>
-        </head>
+
+<body id="back" style="background-color:slategrey;">
+
+    <head>
+        <title>GPA Calculator</title>
+        <link rel="stylesheet" type="text/css" href="assets/font.css">
+        <script src="assets/code.js" type="text/javascript"></script>
+    </head>
 
     <br><br><br>
 
-    <div class = "text">
-        <span class = "bigtext"> <b>Weighted GPA Calculator</b> </span>
-        <p class = "smalltext"> <b>By Andrew Tam, <a href = "https://bths.edu/">BTHS</a> Math '21. </b> </p>
+    <div class="text">
+        <span class="bigtext"> <b>Weighted GPA Calculator</b> </span>
+        <p class="smalltext"> <b>By Andrew Tam, <a href = "https://bths.edu/">BTHS</a> Math '21. </b> </p>
 
     </div>
 
-    <div style = "text-align: center;">
+    <div style="text-align: center;">
         <div>
-            <p class = "medtext"  id = "pupilpath">  Copy the entire PupilPath chart and paste it in the box below </p>
-            <input class = "button" autocomplete = "off" id = "direct" type="text" oninput= "quick()"> 
+            <p class="medtext" id="pupilpath"> Copy the entire PupilPath chart and paste it in the box below </p>
+            <input class="button" autocomplete="off" id="direct" type="text" oninput="quick()" placeholder="Paste Here">
             <br>
             <br>
-            <div  id = "faq" style = "display:block;">
-                <img class = "button" style="text-align: center;"  src = "media/demo.gif">
+            <div id="faq" style="display:block;">
+                <img class="button" style="text-align: center;" src="media/demo.gif">
             </div>
-            <div id = "pl" style = "display:none; text-align: center;" class = "text">
+            <div id="pl" style="display:none; text-align: center;" class="text">
 
-                <p class = "text" id = "textclick">Click on your PLTW Classes Grades in order to weigh them</p>
-                <div id="adjustpltw"  >
+                <p class="text" id="textclick">Click on your PLTW Classes Grades in order to weigh them</p>
+                <div id="adjustpltw">
                     <br>
                 </div>
-               <p class = "text">Some classes, such as AP Physics 1, are weighted double. This is indicated by 2.0 credits instead of 1.0 on your transcript. <br>If you have a double weighted class, just enter the grade twice in it's category. <br></p>
+                <p class="text">Some classes, such as AP Physics 1, are weighted double. This is indicated by 2.0 credits instead of 1.0 on your transcript. <br>If you have a double weighted class, just enter the grade twice in it's category. <br></p>
             </div>
-     </div>
-     
+        </div>
 
-    <div  id = "manual" style = "display:block;">
-        <p class = "text" id = "textmanual"> <b>You can also manually enter your grades, separated by commas</b></p>
-        <form>
-            <pre class = "text" >Normal Grades            <input class = "button" autocomplete="off" id = "grades" type="text" oninput="avg()"> </pre>
-        </form>
-        <form> 
-            <pre class = "text"> Gym Grade                  <input class = "button" autocomplete="off" id = "gym" type="text" oninput="avg()"> </pre>
-        </form>
-        <form>
-            <pre class = "text"> AP or PLTW Grades    <input class = "button" autocomplete="off" id = "AP" type="text" oninput="avg()"> </pre>
-        </form>
-        <p id="gradesHere"></p>
-    </div>
+
+        <div id="manual" style="display:block;">
+            <p class="text" id="textmanual"> <b>You can also manually enter your grades, separated by commas</b></p>
+            <form>
+                <pre class="text">Normal Grades            <input class = "button" autocomplete="off" id = "grades" type="text" oninput="avg()" placeholder="Normal Grades"> </pre>
+            </form>
+            <form>
+                <pre class="text"> Gym Grade                  <input class = "button" autocomplete="off" id = "gym" type="text" oninput="avg()" placeholder = "Gym Grade"> </pre>
+            </form>
+            <form>
+                <pre class="text"> AP or PLTW Grades    <input class = "button" autocomplete="off" id = "AP" type="text" oninput="avg()" placeholder = "AP or PLTW Grades"> </pre>
+            </form>
+            <p id="gradesHere"></p>
+        </div>
 </body>
+
 </html>
