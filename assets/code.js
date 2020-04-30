@@ -65,6 +65,7 @@ function quick()
         else 
         {
             document.getElementById("faq").style.display = "block";
+
             document.getElementById("pupilpath").style.display = "block";
             document.getElementById("pl").style.display = "none";   
             document.getElementById("gradesHere").style.display = "none";    

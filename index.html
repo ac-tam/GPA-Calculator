@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body id="back" style="background-color:slategrey;">
+<body style = "background-image: url(media/math.png);">
 
     <head>
         <title>GPA Calculator</title>
@@ -9,47 +9,42 @@
         <script src="assets/code.js" type="text/javascript"></script>
     </head>
 
-    <br><br><br>
 
-    <div class="text">
-        <span class="bigtext"> <b>Weighted GPA Calculator</b> </span>
-        <p class="smalltext"> <b>By Andrew Tam, <a href = "https://bths.edu/">BTHS</a> Math '21. </b> </p>
 
-    </div>
+    <div>
+        <h1> <b>Weighted GPA Calculator</b> </h1>
 
-    <div style="text-align: center;">
-        <div>
-            <p class="medtext" id="pupilpath"> Copy the entire PupilPath chart and paste it in the box below </p>
-            <input class="button" autocomplete="off" id="direct" type="text" oninput="quick()" placeholder="Paste Here">
-            <br>
-            <br>
+        <p id="pupilpath"> Copy the entire PupilPath chart and paste it in the box below </p>
+        <input autocomplete="off" id="direct" type="text" oninput="quick()" placeholder="Paste Here">
+
             <div id="faq" style="display:block;">
-                <img class="button" style="text-align: center;" src="media/demo.gif">
+                <img  src="media/demo.gif">
             </div>
-            <div id="pl" style="display:none; text-align: center;" class="text">
+    </div> 
+    <div id="pl" style="display:none; text-align: center;" class="text">
 
-                <p class="text" id="textclick">Click on your PLTW Classes Grades in order to weigh them</p>
-                <div id="adjustpltw">
-                    <br>
-                </div>
-                <p class="text">Some classes, such as AP Physics 1, are weighted double. This is indicated by 2.0 credits instead of 1.0 on your transcript. <br>If you have a double weighted class, just enter the grade twice in it's category. <br></p>
-            </div>
+        <p id="textclick">Click on your PLTW Classes Grades in order to weigh them</p>
+        <div id="adjustpltw">
         </div>
-
+    </div>
+       
 
         <div id="manual" style="display:block;">
-            <p class="text" id="textmanual"> <b>You can also manually enter your grades, separated by commas</b></p>
+            <pre  id="textmanual"> <b>You can also manually enter your grades, separated by commas</b></pre>
             <form>
-                <pre class="text">Normal Grades            <input class = "button" autocomplete="off" id = "grades" type="text" oninput="avg()" placeholder="Normal Grades"> </pre>
+                <pre>Normal Grades      <input class = "button" autocomplete="off" id = "grades" type="text" oninput="avg()" placeholder="Normal Grades"> </pre>
             </form>
             <form>
-                <pre class="text"> Gym Grade                  <input class = "button" autocomplete="off" id = "gym" type="text" oninput="avg()" placeholder = "Gym Grade"> </pre>
+                <pre>Gym Grade             <input class = "button" autocomplete="off" id = "gym" type="text" oninput="avg()" placeholder = "Gym Grade"> </pre>
             </form>
             <form>
-                <pre class="text"> AP or PLTW Grades    <input class = "button" autocomplete="off" id = "AP" type="text" oninput="avg()" placeholder = "AP or PLTW Grades"> </pre>
+                <pre>Weighted Grades  <input class = "button" autocomplete="off" id = "AP" type="text" oninput="avg()" placeholder = "AP or PLTW Grades"> </pre>
             </form>
-            <p id="gradesHere"></p>
+            <p id="gradesHere" class = "grades"></p>
+
+            <p> <b>By Andrew Tam </b> </p>
         </div>
+
 </body>
 
 </html>
