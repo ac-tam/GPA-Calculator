@@ -56,11 +56,11 @@ button {
     transition: 0.2s all;
     position: relative;
     margin: 16px auto;
-  }
+}
 
 img {
-    text-align: center;
-    border-radius: 64px;
+text-align: center;
+border-radius: 64px;
 }
 
 .grades {
