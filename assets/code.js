@@ -6,7 +6,6 @@ function quick()
     if (str.length > 0)
     {  
         document.getElementById("faq").style.display = "none";
-        document.getElementById("pupilpath").style.display = "none";
         document.getElementById("pl").style.display = "block";
         var gradeArray = [];
 
@@ -28,7 +27,7 @@ function quick()
         var normal = "";
         var gym = "";
         var ap = "";
-        var potentialpltw = "";
+        var potentialpltw = "<p>Click on your PLTW class grades to weigh them</p>";
         var count = 0;
 
         for (var i = 0; i < gradeArray.length; i++)
@@ -39,7 +38,7 @@ function quick()
             else
             {
                 normal += gradeArray[i].getAvg() + ", ";
-                potentialpltw += `<button id =  ${gradeArray[i].getAvg()} class = "buttonpltw" onclick="adjustap(${gradeArray[i].getAvg()})"> ${gradeArray[i].getAvg()}</button>`
+                potentialpltw += `<button id =  ${gradeArray[i].getAvg()} onclick="adjustap(${gradeArray[i].getAvg()})"> ${gradeArray[i].getAvg()}</button>`
                 count++;
             }
 
@@ -52,6 +51,7 @@ function quick()
             document.getElementById("adjustpltw").style.display = "none";
         else
             document.getElementById("adjustpltw").style.display = "inline-block";
+            
         document.getElementById("adjustpltw").innerHTML = potentialpltw
         document.getElementById("textmanual").style.display = "none"
         document.getElementById("gym").value = gym
@@ -109,8 +109,20 @@ function avg()
     else
         gymEntered = false
 
-    document.getElementById("gradesHere").innerHTML = "<center> <font class = \"nums\"> 100 Scale: " + roundTo2(calcAvg(transcript)) +
-    "</font></center> <center> <font class = \"nums\"> 4.0 Scale: " + roundTo2(calcAvg(to4point0(transcriptunweighted, APGrades.length)))+ "</font></center>";
+    document.getElementById("gradesHere").innerHTML = " 100 Scale: " + roundTo2(calcAvg(transcript)) +
+                                                        "<br> 4.0 Scale: " + roundTo2(calcAvg(to4point0(transcriptunweighted, APGrades.length)));
+
+    var num = calcAvg(transcript)
+    if (num > 90)
+        document.getElementById("a").className = "honors"
+    else if (num > 80)
+        document.getElementById("a").className = "good"
+    else if (num > 65)
+        document.getElementById("a").className = "borderline"
+    else 
+        document.getElementById("a").className = "failing"
+        console.log(num)
+
 }
 
 function calcAvg(nums)
@@ -246,7 +258,7 @@ function adjustap(i)
 
     if (document.getElementById("grades").value === "")
     {
-        document.getElementById("adjustpltw").style.display = "none"
+        document.getElementById("pl").style.display = "none"
         document.getElementById("textclick").style.display = "none"
     }
     avg()
