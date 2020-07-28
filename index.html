@@ -1,52 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" id = "a" class = "norm">
-<style>
 
+<html lang="en" id="a" class="norm">
+<body onload="onaload()">
+    <header>
+        <a href="assets/code.js" class="logo">calculating.tools</a>
+        <link rel="stylesheet" type="text/css" href="assets/styles.css" >
+        <nav>
+            <ul>
+                    
+                <li><a href="">Basic Calculators</a></li>
 
+                <li><a href="C:/calculating.tools/subjects/index.html">Subject Calculators</a></li>
 
-</style>
-<body>
+            
+                <li><a href="">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
 
     <head>
         <title>GPA Calculator</title>
-        <link rel="stylesheet" type="text/css" href="assets/styles.css">
-        <script src="assets/code.js" type="text/javascript"></script>
+
     </head>
 
 
 
-    <div>
+    <div style="float: left; height: 23%">
         <h1> <b>Weighted GPA Calculator</b> </h1>
 
-        <p id="pupilpath"> Copy the entire PupilPath chart and paste it in the box below </p>
+        
         <input autocomplete="off" id="direct" type="text" oninput="quick()" placeholder="Paste Here">
 
-            <div id="faq" style="display:block;">
-                <img  src="media/demo.gif">
-            </div>
-    </div> 
-    <div id="pl" style="display:none; text-align: center;" class="text">
-
-        <div id="adjustpltw" >
-        </div>
     </div>
-       
 
-        <div id="manual" style="display:block;">
-            <pre  id="textmanual"> <b>You can also manually enter your grades, separated by commas</b></pre>
-            <form>
-                <pre>Normal Grades      <input class = "button" autocomplete="off" id = "grades" type="text" oninput="avg()" placeholder="Normal Grades"> </pre>
-            </form>
-            <form>
-                <pre>Gym Grade             <input class = "button" autocomplete="off" id = "gym" type="text" oninput="avg()" placeholder = "Gym Grade"> </pre>
-            </form>
-            <form>
-                <pre>Weighted Grades  <input class = "button" autocomplete="off" id = "AP" type="text" oninput="avg()" placeholder = "AP or PLTW Grades"> </pre>
-            </form>
-            <p id="gradesHere" class = "grades"></p>
 
-            <p> <b>By Andrew Tam </b> </p>
-        </div>
+
+
+
+
+    <div id="" style="display:block; height: 35%; float: right;">
+        <p>Copy and Paste the PupilPath Table to the Right</p>
+        <img src="table.png">
+        
+        <p id="gradesHere" class="grades"></p>
+
+    </div>
+
+    <div id="edit" style="float: left; height: 8%; overflow-y: scroll">
+        <p onclick="avc()">Edit Weighted Classes (click)</p>
+        <table id="weights" style="display: none;">
+            <tr>
+                <th>Keyword</th>
+                <th>Weights</th>
+                <th>Credits</th>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="0x" oninput="addRow()"></td>
+                <td><input type="text" id="0y" oninput="addRow()"></td>
+                <td><input type="text" id="0z" oninput="addRow()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="1x" oninput="addRow()"></td>
+                <td><input type="text" id="1y" oninput="addRow()"></td>
+                <td><input type="text" id="1z" oninput="addRow()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="2x" oninput="addRow()"></td>
+                <td><input type="text" id="2y" oninput="addRow()"></td>
+                <td><input type="text" id="2z" oninput="addRow()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="3x" oninput="addRow()"></td>
+                <td><input type="text" id="3y" oninput="addRow()"></td>
+                <td><input type="text" id="3z" oninput="addRow()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="4x" oninput="addRow()"></td>
+                <td><input type="text" id="4y" oninput="addRow()"></td>
+                <td><input type="text" id="4z" oninput="addRow()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="5x" oninput="addRow()"></td>
+                <td><input type="text" id="5y" oninput="addRow()"></td>
+                <td><input type="text" id="5z" oninput="addRow()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="6x" oninput="addRow()"></td>
+                <td><input type="text" id="6y" oninput="addRow()"></td>
+                <td><input type="text" id="6z" oninput="addRow()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="7x" oninput="addRow()"></td>
+                <td><input type="text" id="7y" oninput="addRow()"></td>
+                <td><input type="text" id="7z" oninput="addRow()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="8x" oninput="addRow()"></td>
+                <td><input type="text" id="8y" oninput="addRow()"></td>
+                <td><input type="text" id="8z" oninput="addRow()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="9x" oninput="addRow()"></td>
+                <td><input type="text" id="9y" oninput="addRow()"></td>
+                <td><input type="text" id="9z" oninput="addRow()"></td>
+            </tr>
+
+        </table>
+
+    </div>
 
 </body>
 
